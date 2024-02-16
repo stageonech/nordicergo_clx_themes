@@ -1,0 +1,26 @@
+on:
+  push:
+    branches: [ production ]
+name: Deploy Website on push
+jobs:
+  web-deploy:
+    name: 🚀 FTP Deploy
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: 80.74.136.182
+          protocol: ftps
+          port: 21
+          username: ${{ secrets.PROD_FTP_USER }}
+          password: ${{ secrets.PROD_FTP_PASSWORD }}
+          server-dir: themes/
