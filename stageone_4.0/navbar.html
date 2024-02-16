@@ -1,0 +1,44 @@
+
+<!-- BEGIN navigation_dropdown -->
+{V2}
+
+<ul id="main-navigation" class="uk-navbar-nav">
+    <!-- BEGIN level_1 -->
+    <li class="level-1 {STYLE} {CSS_NAME} ">
+
+        <a class="{STYLE} {CSS_NAME} level-1 uk-text-uppercase" href="{URL}" target="{TARGET}" title="{NAME}">{NAME}</a>
+
+        <!-- BEGIN level_1_sub_menu -->
+        <div class="uk-navbar-dropdown uk-background-cover uk-background-top-left  rounded-corners-small" style="background-image: url('/themes/stageone_4.0/assets/images/Pattern-Background.jpg');">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                {SUB_MENU}
+            </ul>
+        </div>
+        <!-- END level_1_sub_menu -->
+
+    </li>
+
+    <!-- END level_1 -->
+
+    <!-- BEGIN level_2 -->
+    <li class="level-2 {STYLE} {CSS_NAME}">
+        <a class="{STYLE} {CSS_NAME} level-2" href="{URL}" target="{TARGET}" title="{CSS_NAME}">{NAME}</a>
+        <!-- BEGIN level_2_sub_menu -->
+        <div class="level-3-menu uk-margin-remove uk-height-1-1 uk-position-top-right uk-background-secondary" style="padding:20px 0; width:200px; right:-200px;">
+            <ul class="level_%s menu uk-height-1-1">{SUB_MENU}</ul>
+        </div>
+        <!-- END level_2_sub_menu -->
+    </li>
+
+    <!-- END level_2 -->
+
+    <!-- BEGIN level_3 -->
+    <li class="level-3 {STYLE} {CSS_NAME}" style="padding:6px 0">
+        <a class="{STYLE} {CSS_NAME}" href="{URL}" target="{TARGET}" title="{NAME}" >{NAME}</a>
+    </li>
+    <!-- END level_3 -->
+
+</ul>
+
+
+<!-- END navigation_dropdown -->

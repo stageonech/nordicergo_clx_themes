@@ -1,0 +1,36 @@
+
+<div>
+
+
+    <div class="uk-flex uk-flex-middle">
+
+        <span data-uk-icon="icon:thin-018_zoom_find_search_magnifying_glass;ratio:0.6;" class="uk-padding-small"></span>
+
+        <form id="global-search-form" class="uk-search uk-search-navbar uk-width-1-1" action="index.php" method="get">
+            <input type="hidden" name="section" value="search"/>
+            <input id="global-search-input" class="uk-search-input" type="search" name="term" placeholder="Suchbegriff eingeben..."  autocomplete="off" autofocus>
+        </form>
+
+    </div>
+
+    <hr class="uk-margin-remove-bottom" />
+
+    <div class="uk-padding-remove-top" style="min-height:300px;">
+        <ul id="global-search-container" class="uk-list" style="margin-top:10px;"></ul>
+        <div id="global-search-message" class="uk-margin-top">Keine Ergebnisse mit diesem Suchbegriff gefunden.</div>
+    </div>
+
+    <div class="uk-hidden">
+        <p class="search-message">{SEARCH_TITLE}</p>
+
+        <!-- BEGIN search_result -->
+        <a href="{SEARCH_RESULT_SRC}" class="search-content-{SEARCH_RESULT_COMPONENT}">
+            <h4>{SEARCH_RESULT_TITLE}</h4><p>{SHORT_CONTENT}</p>
+        </a>
+        <!-- END search_result -->
+
+        {SEARCH_PAGING}
+    </div>
+
+
+</div>

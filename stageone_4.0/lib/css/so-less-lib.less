@@ -1,0 +1,110 @@
+
+/*****************************************************
+*
+*     Stageone LESS Library
+*
+******************************************************/
+
+
+//
+// Font Definitions
+//
+
+.fontThin()                                           { font-family: @font-thin; font-weight:@font-thin-weight; }
+.fontThinItalic()                                     { font-family: @font-thin-italic; font-weight:@font-thin-weight; }
+
+.fontUltraLight()                                     { font-family: @font-ultra-light; font-weight:@font-ultra-light-weight; }
+.fontUltraLightItalic()                               { font-family: @font-ultra-light-italic; font-weight:@font-ultra-light-weight; }
+
+.fontLight()                                          { font-family: @font-light; font-weight:@font-light-weight; }
+.fontLightItalic()                                    { font-family: @font-light-italic; font-weight:@font-light-weight; }
+
+.fontRegular()                                        { font-family: @font-regular; font-weight:@font-regular-weight; }
+.fontRegularItalic()                                  { font-family: @font-regular-italic; font-weight:@font-regular-weight; }
+
+.fontMedium()                                         { font-family: @font-medium; font-weight:@font-medium-weight; }
+.fontMediumItalic()                                   { font-family: @font-medium-italic; font-weight:@font-medium-weight; }
+
+.fontSemibold()                                       { font-family: @font-semibold; font-weight:@font-semibold-weight; }
+.fontSemiboldItalic()                                 { font-family: @font-semibold-italic; font-weight:@font-semibold-weight; }
+
+.fontBold()                                           { font-family: @font-bold; font-weight:@font-bold-weight; }
+.fontBoldItalic()                                     { font-family: @font-bold-italic; font-weight:@font-bold-weight; }
+
+.fontExtraBold()                                      { font-family: @font-extra-bold; font-weight:@font-extra-bold-weight; }
+.fontExtraBoldItalic()                                { font-family: @font-extra-bold-italic; font-weight:@font-extra-bold-weight; }
+
+.fontBlack()                                          { font-family: @font-black; font-weight:@font-extra-bold-weight; }
+.fontBlackItalic()                                    { font-family: @font-extra-bold-italic; font-weight:@font-extra-bold-weight; }
+
+.fontSmoothing()                                       {font-smooth: always; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+//
+// Misc
+//
+
+.roundedCorners(@radiusTL:@global-border-radius,
+                @radiusTR:@global-border-radius,
+                @radiusBR:@global-border-radius,
+                @radiusBL:@global-border-radius)      { -webkit-border-radius: @radiusTL @radiusTR @radiusBR @radiusBL; -moz-border-radius: @radiusTL @radiusTR @radiusBR @radiusBL; border-radius: @radiusTL @radiusTR @radiusBR @radiusBL;}
+
+
+.transform(@value)                                    { -webkit-transform: @value; -moz-transform: @value; -o-transform: @value; -ms-transform: @value; transform: @value; }
+
+.transition-duration(@value: 0.5s)                    { -webkit-transition-duration: @value; -moz-transition-duration: @value; -o-transition-duration: @value; -ms-transition-duration: @value; transition-duration: @value; }
+
+.rotate(@rotate:30deg)                                { -moz-transform:rotate(@rotate); -webkit-transform:rotate(@rotate); -o-transform:rotate(@rotate); -ms-transform:rotate(@rotate); transform:rotate(@rotate); }
+
+.transition(@transition: all 0.3s ease)              { -webkit-transition: @transition; -moz-transition: @transition; -o-transition: @transition; transition: @transition; -moz-transition: @transition; }
+
+.boxShadow(@value:@global-small-box-shadow)           { -webkit-box-shadow: @value; -moz-box-shadow: @value; box-shadow: @value; }
+
+.insetShadow(@valueInset:@global-small-box-shadow)    { -webkit-box-shadow: inset @valueInset; -moz-box-shadow: inset @valueInset; box-shadow: inset @valueInset; }
+
+.blur(@value)                                         { -webkit-filter: blur(@value); -moz-filter: blur(@value);-o-filter: blur(@value);  -ms-filter: blur(@value);  filter: blur(@value);}
+
+.gradient(      @color1:rgba(255,255,255,0.95),
+                @color2:rgba(255,255,255,0.0),
+                @pos1: 0%,
+                @pos2: 100%,
+                @deg: 0deg)                        { background-image: -moz-linear-gradient(@deg, @color1 @pos1, @color2 @pos2); background-image: -webkit-linear-gradient(@deg, @color1 @pos1, @color2 @pos2); background-image: linear-gradient(@deg, @color1 @pos1, @color2 @pos2);}
+
+.tripleGradient(@color1:rgba(255,255,255,0.9),
+                @color2:rgba(255,255,255,0.75),
+                @color3:rgba(255,255,255,0.0),
+                @pos1: 0%,
+                @pos2: 75%,
+                @pos3: 100%,
+                @deg: 0deg)                        { background-image: -moz-linear-gradient(@deg, @color1 @pos1, @color2 @pos2, @color3 @pos3); background-image: -webkit-linear-gradient(@deg, @color1 @pos1, @color2 @pos2, @color3 @pos3); background-image: linear-gradient(@deg, @color1 @pos1, @color2 @pos2, @color3 @pos3);}
+
+
+//
+// Bubble
+//
+
+.bubbleTop(     @bubble-color:@global-color,
+                @bubble-height:10px,
+                @bubble-width:10px,
+                @bubble-pos:50%)                   {content:"";position:absolute;top:-@bubble-height;left:@bubble-pos;margin-left:-@bubble-width;border-top:0 solid transparent;border-right:@bubble-height solid transparent;border-bottom:@bubble-height solid @bubble-color;border-left:@bubble-height solid transparent;}
+
+
+.bubbleBottom(  @bubble-color:@global-color,
+                @bubble-height:10px,
+                @bubble-width:10px,
+                @bubble-pos:50%)                   {content:"";position:absolute;bottom:-@bubble-height;left:@bubble-pos;margin-left:-@bubble-width;border-top:@bubble-height solid @bubble-color;border-right:@bubble-height solid transparent;border-bottom:0 solid transparent;border-left:@bubble-height solid transparent;}
+
+.bubbleRight(   @bubble-color:@global-color,
+                @bubble-height:10px,
+                @bubble-width:10px,
+                @bubble-pos:50%)                   {content:"";position:absolute;top:@bubble-pos;right:-@bubble-width;margin-top:-@bubble-height;border-top:@bubble-height solid transparent;border-right:0 solid transparent;border-bottom:@bubble-height solid transparent;border-left:@bubble-width solid @bubble-color;}
+
+.bubbleLeft(   @bubble-color:@global-color,
+                @bubble-height:10px,
+                @bubble-width:10px,
+                @bubble-pos:50%)                   {content:"";position:absolute;top:@bubble-pos;left:-@bubble-width;margin-top:-@bubble-height;border-top:@bubble-height solid transparent;border-right:@bubble-width solid @bubble-color;border-bottom:@bubble-height solid transparent;border-left:0 solid transparent;}
+
+
+//
+// Cover
+//
+.coverPosition(@left:50%, @top:50% )                { left:@left; top:@top; .transform(translate(-@left,-@top)) }

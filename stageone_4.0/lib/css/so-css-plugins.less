@@ -1,0 +1,338 @@
+/*****************************************************
+*
+*     Stageone CSS Plugins
+*
+******************************************************/
+
+
+/*****************************************************
+*
+*     Bubbles
+*
+******************************************************/
+
+@bubble-color:@navbar-dropdown-background;
+@bubble-inverse-color:@global-inverse-color;
+@bubble-height:10px;
+@bubble-width:10px;
+@bubble-horizontal-pos:20%;
+
+.bubble-top {
+  &:before {
+    content:"";
+    position:absolute;
+    top:-@bubble-height;
+    left:@bubble-horizontal-pos;
+    margin-left:-@bubble-width;
+    border-top:0 solid transparent;
+    border-right:@bubble-height solid transparent;
+    border-bottom:@bubble-height solid @bubble-color;
+    border-left:@bubble-height solid transparent;
+  }
+}
+
+.bubble-top-inverse {
+  &:before {
+    content:"";
+    position:absolute;
+    top:-@bubble-height;
+    left:@bubble-horizontal-pos;
+    margin-left:-@bubble-width;
+    border-top:0 solid transparent;
+    border-right:@bubble-height solid transparent;
+    border-bottom:@bubble-height solid @bubble-inverse-color;
+    border-left:@bubble-height solid transparent;
+  }
+}
+
+.bubble-bottom {
+  &:before {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:@bubble-horizontal-pos;
+    margin-left:-@bubble-width;
+    border-top:0 solid transparent;
+    border-right:@bubble-height solid transparent;
+    border-bottom:@bubble-height solid @bubble-color;
+    border-left:@bubble-height solid transparent;
+  }
+}
+
+.bubble-bottom-inverse {
+  &:before {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:@bubble-horizontal-pos;
+    margin-left:-@bubble-width;
+    border-top:0 solid transparent;
+    border-right:@bubble-height solid transparent;
+    border-bottom:@bubble-height solid @bubble-inverse-color;
+    border-left:@bubble-height solid transparent;
+  }
+}
+
+
+/*****************************************************
+*
+*     Hamburger Animation
+*
+******************************************************/
+
+@line-stroke: 2px;
+@line-gap: 7px;
+@color: @color-base-a;
+@color-hover: @color-base-e;
+
+.animated-mobile-menu {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 42px;
+  font-size: 0;
+  text-indent: -9999px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.animated-mobile-menu:focus {outline: none;}
+.animated-mobile-menu span {display: block; position: absolute;top: 20px;left: 10px;right: 10px;height: @line-stroke;background: @color;}
+.animated-mobile-menu span::before, .animated-mobile-menu span::after {position: absolute; display: block;left: 0;width: 100%;height: @line-stroke;background-color:@color;content: ""; }
+.animated-mobile-menu span::before { top: -@line-gap; }
+.animated-mobile-menu span::after { bottom: -@line-gap;}
+
+.uk-active.animated-mobile-menu span {background-color:@color-hover;}
+.uk-active.animated-mobile-menu span::before, .uk-active.animated-mobile-menu span::after {background-color:@color-hover;}
+
+.h2x span {transition: background 0.3s; }
+.h2x span::before, .h2x span::after { transition-duration: 0.3s, 0.3s;transition-delay: 0.3s, 0s;}
+.h2x span::before {transition-property: top, transform;}
+.h2x span::after {transition-property: bottom, transform;}
+
+.h2x.uk-active span {background: none;}
+.h2x.uk-active span::before {top: 0;transform: rotate(45deg);}
+.h2x.uk-active span::after {bottom: 0; transform: rotate(-45deg); }
+.h2x.uk-active span::before, .h2x.uk-active span::after {transition-delay: 0s, 0.3s;}
+
+
+/*****************************************************
+*
+*     Chevron Animation
+*
+******************************************************/
+
+@naviconBtnSize: 43px;
+@naviconBtnPadding: 13px;
+@naviconLineW: 14px;
+@naviconLineH: 1px;
+@lineRotation: -45deg;
+@naviconOpenPos: 0;
+
+// chevron up/down
+.animated-chevron {
+  cursor: pointer;
+  .transition();
+  width:@naviconBtnSize;
+  height:@naviconBtnSize;
+}
+
+.animated-chevron {
+  position:relative;
+  font-size: 1.9em;
+  line-height:1em;
+  color:@global-background;
+  .inner-container {
+    position:relative;
+  }
+}
+
+.chevron-line {
+  position: absolute;
+  width: @naviconLineW;
+  height: @naviconLineH;
+  background-color: @global-background;
+}
+
+.line-left, .line-right {
+  transition: .3s;
+  position:absolute;
+  top:(@naviconBtnSize/2) + @naviconOpenPos;
+}
+
+.line-left {
+  transform: rotate3d(0,0,1,@lineRotation);
+  left:(@naviconBtnPadding*1.5);
+}
+.line-right {
+  transform: rotate3d(0,0,1,-@lineRotation);
+  right:(@naviconBtnPadding*1.5);
+}
+
+li.level-1.uk-open .animated-chevron div  .line-left {
+  transform: rotate3d(0,0,1,-@lineRotation);
+  top:(@naviconBtnSize/2) - @naviconOpenPos;
+}
+
+li.level-1.uk-open .animated-chevron div .line-right {
+  transform: rotate3d(0,0,1,@lineRotation);
+  top:(@naviconBtnSize/2) - @naviconOpenPos;
+}
+
+
+/*****************************************************
+*
+*     Dot Animation
+*
+******************************************************/
+@dotSize: 42px;
+
+#dot-animation{
+  display: block;
+  position:absolute;
+  transform:scale(0.4,0.4);
+}
+
+.dot,
+.ringOne,
+.ringTwo {
+  display:block;
+  border-radius:50%;
+  position:absolute;
+  vertical-align:middle;
+}
+
+.dot {
+  width:@dotSize + 2;
+  height:@dotSize + 2;
+  background: @color-a;
+  border:6px solid @color-base-c;
+  margin-top: -6px;
+  margin-left: -6px;
+}
+
+.ringOne, .ringTwo {
+  width:@dotSize;
+  height:@dotSize;
+  background:rgba(0,89,47,0.4);
+  border:2px solid @color-a;
+  animation:3000ms pulseIn cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  -webkit-animation:3000ms pulseIn 100ms cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+.ringTwo {
+  animation-delay: 900ms;
+  -webkit-animation-delay: 900ms;
+}
+
+@keyframes pulseIn {
+  0%{
+    opacity:1;
+    transform:scale(0,0);
+  }
+
+  100% {
+    opacity:0;
+    transform:scale(6,6);
+  }
+}
+
+@-webkit-keyframes pulseIn {
+  0% {
+    opacity:1;
+    -webkit-transform:scale(0,0);
+  }
+  100%{
+    opacity:0;
+    -webkit-transform:scale(6,6);
+  }
+}
+
+
+/*****************************************************
+*
+*     Angle Section
+*
+******************************************************/
+
+@rotation:1; // customize
+
+@angle: @rotation * 1deg;
+@offset: @rotation * 100px;
+@angle-border:8px;
+
+.angle-section {
+  position:relative;
+  z-index: 1;
+
+  .top-angle {
+    position:absolute;
+    top:-(@offset/2);
+    left:0;
+    width:100%;
+    height:@offset;
+    overflow: hidden;
+    z-index:0;
+
+    > .angle {
+      position:absolute;
+      top:@offset / 4;
+      left:-50%;
+      width:200%;
+      height:(@offset);
+      z-index:0;
+      background:@color-a;
+      .rotate(@angle);
+
+      > .angle-border {
+        position:absolute;
+        top:-@angle-border;
+        left:0;
+        width:100%;
+        height:@angle-border;
+        background:@color-base-a;
+      }
+    }
+
+  }
+
+  .section-content {
+    position:relative;
+    z-index:1;
+  }
+
+  .bottom-angle{
+    position:absolute;
+    bottom:-(@offset/2);
+    left:0;
+    width:100%;
+    height:@offset;
+    overflow: hidden;
+    z-index:0;
+
+    > .angle {
+      position:absolute;
+      bottom:@offset / 4;
+      left:-50%;
+      width:200%;
+      height:(@offset);
+      z-index:0;
+      .rotate(@angle);
+
+      > .angle-border {
+        position:absolute;
+        bottom:-@angle-border;
+        left:0;
+        width:100%;
+        height:@angle-border;
+        background:@color-base-a;
+      }
+
+    }
+
+  }
+
+}

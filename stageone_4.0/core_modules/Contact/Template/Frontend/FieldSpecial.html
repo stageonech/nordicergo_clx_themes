@@ -1,0 +1,46 @@
+<!-- BEGIN contact_form_field_special_select -->
+<div class="contact-row  form-group uk-margin-small-bottom uk-margin-bottom">
+
+    <label class="uk-form-label" for="contactFormFieldId_{CONTACT_FORM_FIELD_ID}">
+        {CONTACT_FORM_FIELD_LABEL}
+
+        <!-- BEGIN contact_form_field_required -->
+        <strong class="is_required">*</strong>
+        <!-- END contact_form_field_required -->
+    </label>
+
+    <div class="uk-form-controls">
+        <select class="contactFormClass_special uk-select" name="contactFormField_{CONTACT_FORM_FIELD_ID}" id="contactFormFieldId_{CONTACT_FORM_FIELD_ID}" {CONTACT_FORM_FIELD_REQUIRED}>
+
+            <!-- BEGIN contact_form_field_options -->
+            <option value="{CONTACT_FORM_FIELD_VALUE_KEY}" {CONTACT_FORM_FIELD_SELECTED}>{CONTACT_FORM_FIELD_VALUE}</option>
+            <!-- END contact_form_field_options -->
+        </select>
+    </div>
+
+    <div class="error-container uk-text-meta"></div>
+
+</div>
+<!-- END contact_form_field_special_select -->
+
+<!-- BEGIN contact_form_field_special_input -->
+<div class="contact-row  form-group">
+    <label class="uk-form-label uk-meta-title" for="contactFormFieldId_{CONTACT_FORM_FIELD_ID}">
+
+        {CONTACT_FORM_FIELD_LABEL}
+
+        <!-- BEGIN contact_form_field_required -->
+        <strong class="is_required">*</strong>
+        <!-- END contact_form_field_required -->
+    </label >
+
+    <div class="uk-position-relative">
+        <input class="contactFormClass_special {CONTACT_FORM_FIELD_ADDITIONAL_CLASS} uk-input" id="contactFormFieldId_{CONTACT_FORM_FIELD_ID}" type="{CONTACT_FORM_FIELD_TYPE}" placeholder="{CONTACT_FORM_FIELD_PLACEHOLDER}" name="contactFormField_{CONTACT_FORM_FIELD_ID}" value="{CONTACT_FORM_FIELD_VALUE}" {CONTACT_FORM_FIELD_REQUIRED} />
+        <i data-uk-icon="icon:thin-000_check;ratio:0.70;" class="form-icon ipt-valid-icon"></i>
+        <i data-uk-icon="icon:thin-416_arrow_direction_left_small;ratio:0.70;" class="form-icon ipt-error-icon"></i>
+    </div>
+
+    <div class="error-container uk-text-meta"></div>
+
+</div>
+<!-- END contact_form_field_special_input -->

@@ -1,0 +1,31 @@
+
+<div class="contact-row  form-group uk-margin-bottom">
+
+    <label class="uk-form-label" for="contactFormFieldId_{CONTACT_FORM_FIELD_ID}">
+
+        {CONTACT_FORM_FIELD_LABEL}
+
+        <!-- BEGIN contact_form_field_required -->
+        <strong class="is_required">*</strong>
+        <!-- END contact_form_field_required -->
+
+    </label>
+
+    <div class="uk-form-controls">
+        <div class="contactFormUpload" id="contactFormUpload_{CONTACT_FORM_FIELD_ID}">
+
+            {CONTACT_UPLOADER_FOLDER_WIDGET}
+
+            <div uk-form-custom="target: true">
+
+                <input type="file" class="contactFormClass_multi_file uk-input" id="contactFormFieldId_{CONTACT_FORM_FIELD_ID}" name="contactFormField_{CONTACT_FORM_FIELD_ID}" disabled="disabled" {CONTACT_FORM_FIELD_REQUIRED} />
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled="disabled" >
+                <input type="hidden" name="contactFormUploadId_{CONTACT_FORM_FIELD_ID}" value="{CONTACT_FORM_FIELD_VALUE}" />
+
+            </div>
+
+            <div class="error-container uk-text-meta"></div>
+
+        </div>
+    </div>
+</div>

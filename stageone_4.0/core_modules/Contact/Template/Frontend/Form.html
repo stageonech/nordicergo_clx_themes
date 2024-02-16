@@ -1,0 +1,88 @@
+<!-- BEGIN contact_form_css_link -->
+<!--<link href="{CONTACT_FORM_CSS_HREF}" rel="stylesheet" type="text/css" />-->
+<!-- END contact_form_css_link -->
+
+<!-- BEGIN formText -->
+<!--{CONTACT_FORM_TEXT}-->
+<!-- END formText -->
+
+
+<!-- Content -->
+<div id="second-section"  class="uk-section uk-padding-remove uk-overflow-hidden uk-position-relative gradient-bottom ">
+
+    <div class="uk-overflow-visible uk-position-top">
+        <img src="/themes/stageone_4.0/assets/images/Pattern-Spacer.svg" alt="Ergotherapie" class="uk-width-1-1" />
+    </div>
+
+    <div class="uk-section uk-margin-medium-top uk-position-relative uk-position-z-index">
+        <div class="uk-container">
+
+            <div>
+                <div class="uk-card uk-card-default rounded-corners uk-flex uk-flex-column uk-flex-between">
+                    <div class="uk-card-body ">
+                        <div class="uk-card-badge color-a font-bold">01</div>
+
+                        <div class="uk-position-relative uk-display-inline-block"><span class="uk-flex uk-flex-middle uk-flex-center uk-background-cover" style="width:80px; height:88px;background-image: url('/themes/stageone_4.0/assets/images/Pattern-Logo.png')"><span class="uk-icon uk-light" data-uk-icon="icon: c-budicon-document-098;ratio:2;"></span> </span></div>
+
+                        <h2>{CONTACT_FORM_NAME}</h2>
+                        <div class="text-warning uk-width-1-1" id="contactFeedback">
+                            {CONTACT_FEEDBACK_TEXT}
+                        </div>
+                        <div class="text-danger uk-width-1-1" id="contactFormError">
+                            {TXT_NEW_ENTRY_ERORR}
+                        </div>
+
+                        <!-- BEGIN contact_form -->
+                        <form role="form" id="contactForm{CONTACT_FORM_CUSTOM_STYLE_ID}" class="contactForm{CONTACT_FORM_CUSTOM_STYLE_ID} contact-form" action="{CONTACT_FORM_ACTION}" method="post" enctype="multipart/form-data" >
+                            <fieldset id="fieldset-01" class="uk-fieldset">
+
+                                <legend class="uk-legend">uk-child-width-1-3@m</legend>
+
+                                <div class="uk-grid uk-grid-small uk-child-width-1-1 uk-child-width-1-3@m" data-uk-grid>
+                                    <!-- BEGIN contact_form_field_list -->
+                                    {CONTACT_FORM_FIELD}
+                                    <!-- END contact_form_field_list -->
+
+
+                                    <!-- BEGIN contact_form_captcha -->
+                                    <div class="contact-row form-group uk-margin uk-width-1-1">
+                                        {CONTACT_CAPTCHA_CODE}
+                                    </div>
+
+                                </div>
+                                <!-- END contact_form_captcha -->
+                            </fieldset>
+
+                            <fieldset id="submitFrame" class="uk-fieldset">
+                                <div class="uk-grid uk-grid-small" data-uk-grid>
+                                    <div class="contact-row form-group uk-margin uk-text-right uk-width-1-1">
+                                        <input class="contactFormClass_button uk-button uk-button-secondary" type="submit" name="submitContactForm" value="{TXT_CONTACT_SUBMIT}" />
+                                        <input type="hidden" name="unique_id" value="{CONTACT_UNIQUE_ID}" />
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                        </form>
+                        <!-- END contact_form -->
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+{CONTACT_JAVASCRIPT}
+
+
+
+
+
+
+
+
+

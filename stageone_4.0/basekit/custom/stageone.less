@@ -1,0 +1,334 @@
+/*****************************************************
+*
+*     Read me
+*
+******************************************************/
+// Install yarn with 'yarn'
+// Compile this less file with 'yarn compile'
+
+
+
+/*****************************************************
+*
+*     Imports
+*
+******************************************************/
+
+
+//
+// UIKit Core
+//
+@import "../src/less/uikit.less";
+
+//
+// Stageone Customizings
+//
+@import "../../lib/css/so-uikit-config.less";
+@import "../../lib/css/so-less-lib.less";
+@import "../../lib/css/so-css-plugins.less";
+@import "../../lib/css/so-template-base-styles.less";
+
+
+
+/*****************************************************
+*
+*     Stageone Template
+*
+******************************************************/
+
+//
+// Phone portrait
+//
+
+body {
+  .fontSmoothing();
+}
+
+a, .uk-link, input[type="submit"] {
+  .transition();
+}
+
+.rounded-corners-small {
+  .roundedCorners(2px, 2px, 2px, 2px);
+}
+
+.switcher-icon {
+  .transition();
+  .rotate(180deg);
+}
+
+.scroll-down-button, #mobile-menu-button, #mobile-content-menu-button {
+  .transition();
+  opacity: 1;
+  visibility: visible;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.scroll-up-button {
+  .transition();
+  opacity: 0;
+  visibility: hidden;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.level-1.uk-open {
+  .switcher-icon {
+    .rotate(0deg);
+  }
+}
+
+.cover-top-left {
+  .coverPosition(0%, 0%);
+}
+
+.cover-bottom-right {
+  .coverPosition(100%, 100%);
+}
+
+.gradient-bottom {
+  .gradient(fade(@color-a,75%), fade(@color-a,5%), 0%, 50% );
+}
+
+.rotate-90 {
+  .rotate(90deg);
+}
+
+.rotate--90 {
+  .rotate(-90deg);
+}
+
+.uk-position-z-index-2 {
+ z-index: 2;
+}
+
+.uk-position-z-index-3 {
+  z-index: 3;
+}
+
+.uk-position-z-index-4 {
+  z-index: 4;
+}
+
+h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
+  letter-spacing: @medium-letter-spacing;
+  .hyphens();
+}
+
+h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
+  text-transform: uppercase;
+}
+
+.uk-list {
+  li {
+    color:@color-a;
+    .fontMedium();
+  }
+
+  &.uk-list-bullet > li::before {
+    color:@color-a;
+  }
+
+  &.color-base-a {
+    li {
+      color:@color-base-a;
+    }
+  }
+  &.color-base-b {
+    li {
+      color:@color-base-b;
+    }
+  }
+}
+
+#main-navigation, #mobile-navigation {
+  a.level-1 {
+    font-weight:@font-semibold-weight;
+    letter-spacing: @large-letter-spacing;
+  }
+
+}
+
+#mobile-navigation {
+  a.starter_active, a.active {
+    color: @navbar-dropdown-nav-item-active-color !important;
+  }
+
+  .starter_active {
+    .uk-icon {
+      color:@color-base-a !important;
+    }
+  }
+}
+
+#home-background-section {
+  height:75%;
+}
+
+#first-content-section {
+  margin-top:38%;
+}
+
+#main-navigation {
+  .hidden-on-screen {
+    display:none;
+  }
+}
+
+.uk-button {
+  font-weight: @font-semibold-weight;
+}
+
+.uk-button-text,
+.uk-button-default,
+.uk-button-primary,
+.uk-button-secondary {
+  .roundedCorners();
+  padding-top:14px;
+  padding-bottom:14px;
+}
+
+.uk-button-text {
+  letter-spacing: @large-letter-spacing;
+  text-transform: uppercase;
+}
+
+.uk-icon {
+  vertical-align: 2px;
+  margin-left:3px;
+}
+
+.uk-text-large {
+  color:@color-base-a;
+}
+
+.uk-text-lead {
+  font-style: italic;
+  font-weight: @font-light-weight;
+}
+
+.line-height-reset {
+  line-height: 1em;
+}
+
+label.focus-state-label {
+  font-size:0.875em;
+}
+
+.uk-input,
+.uk-textarea {
+  .transition();
+
+  border:@global-medium-border-width solid @global-border;
+  .roundedCorners();
+
+  &.ipt-valid {
+    color:@color-a;
+    border-color:@color-a;
+  }
+}
+
+.ipt-valid-icon {
+  color:@color-a;
+}
+
+.has-focus {
+
+  label.focus-state-label {
+    .transition();
+    color:@color-a;
+    font-size:1em;
+  }
+
+  .uk-input,
+  .uk-textarea {
+    border-color:@color-a;
+  }
+
+}
+
+
+//
+// Tablet portrait
+//
+
+@media (min-width: @breakpoint-small) {
+
+  #home-background-section {
+    height:90%;
+  }
+
+  #first-content-section {
+    margin-top:45%;
+  }
+
+}
+
+
+
+//
+// Tablet landscape
+//
+@media (min-width: @breakpoint-medium) {
+
+  #home-background-section {
+    height:80%;
+  }
+
+
+  #first-content-section {
+    margin-top:120px;
+  }
+
+}
+
+
+//
+// Desktop
+//
+
+@media (min-width: @breakpoint-large) {
+
+  #first-content-section {
+    margin-top:140px;
+  }
+
+}
+
+//
+// Large screens
+//
+
+@media (min-width: @breakpoint-xlarge) {
+
+  #home-background-section {
+    height:92%;
+  }
+
+  #first-section {
+    margin-top:120px;
+  }
+
+}
+
+
+//
+// Crossbrowser fallback
+//
+
+.is-explorer {
+  // Empty
+}
+
+.is-explorer-11 {
+  // Empty
+}

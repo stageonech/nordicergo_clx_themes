@@ -1,0 +1,25 @@
+
+<div class="contact-row uk-margin-bottom">
+
+    <div class="uk-form-controls uk-position-relative">
+        <label class="uk-form-label uk-meta-title focus-state-label" for="contactFormFieldId_{CONTACT_FORM_FIELD_ID}">
+
+            {CONTACT_FORM_FIELD_LABEL}
+
+            <!-- BEGIN contact_form_field_required -->
+            <span class="is_required">*</span>
+            <!-- END contact_form_field_required -->
+
+        </label>
+
+
+        <div class="uk-position-relative">
+            <input class="contactFormClass_text uk-input" id="contactFormFieldId_{CONTACT_FORM_FIELD_ID}" type="{CONTACT_FORM_FIELD_TYPE}" placeholder="{CONTACT_FORM_FIELD_PLACEHOLDER}" name="contactFormField_{CONTACT_FORM_FIELD_ID}" value="{CONTACT_FORM_FIELD_VALUE}" {CONTACT_FORM_FIELD_REQUIRED} />
+            <i data-uk-icon="icon:g-budicon-interface-054;ratio:1;" class="form-icon ipt-valid-icon uk-position-center-right uk-margin-right"></i>
+            <i data-uk-icon="icon:g-budicon-interface-053;ratio:1;" class="form-icon ipt-error-icon uk-position-center-right uk-margin-right"></i>
+        </div>
+
+        <div class="error-container uk-text-meta"></div>
+    </div>
+
+</div>

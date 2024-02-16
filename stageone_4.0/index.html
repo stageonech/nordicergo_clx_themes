@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="{ACTIVE_LANGUAGE_NAME}">
+
+    <head>
+        <meta charset="{CHARSET}" />
+
+        <title>{METATITLE} - {GLOBAL_TITLE}</title>
+
+        <meta name="description" content="{METADESC}" />
+        <meta name="keywords" content="{METAKEYS}" />
+        <meta name="robots" content="{METAROBOTS}" />
+        <meta name="generator" content="{VERSION}" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="{GLOBAL_TITLE}" />
+        <meta property="og:title" content="{METATITLE}" />
+        <meta property="og:description" content="{METADESC}" />
+        <meta property="og:url" content="{METAURL}" />
+        <meta property="og:image" content="{METAIMAGE}" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/themes/stageone_4.0/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/themes/stageone_4.0/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/themes/stageone_4.0/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/themes/stageone_4.0/assets/favicon/site.webmanifest">
+        <link rel="mask-icon" href="/themes/stageone_4.0/assets/favicon/safari-pinned-tab.svg" color="#5fbebe">
+        <link rel="shortcut icon" href="/themes/stageone_4.0/assets/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#5fbebe">
+        <meta name="msapplication-config" content="/themes/stageone_4.0/assets/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        {CANONICAL_LINK}
+
+        <!-- Fonts -->
+        <link href = "https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel = "stylesheet" href = "/themes/stageone_4.0/basekit/dist/css/uikit.stageone.min.css?v=2.0" >
+
+        <!-- Javascript -->
+        <script src = "/themes/stageone_4.0/lib/js/plugins.min.js"></script>
+        <script src = "/themes/stageone_4.0/basekit/dist/js/uikit.min.js"></script>
+        <script src = "/themes/stageone_4.0/basekit/dist/js/uikit-icons-stageone.min.js?v=2.0"></script>
+
+        <!--<script src = "/themes/stageone_4.0/lib/js/stageone.min.js"></script>-->
+        <script src = "/themes/stageone_4.0/basekit/custom/stageone.js?v=2.1"></script>
+
+        <!-- Google Analytics -->
+        <!--{GOOGLE_ANALYTICS}-->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src = "https://www.googletagmanager.com/gtag/js?id=UA-165038046-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('set', 'anonymizeIp', true);
+            gtag('config', 'UA-165038046-1');
+        </script>
+
+
+        <!-- Cloudrexx Javascript -->
+        {JAVASCRIPT}
+
+    </head>
+
+    <body class="" data-css-name="{CSS_NAME}" data-frontend-lang="{ACTIVE_LANGUAGE_NAME}">
+
+        {CONTENT_FILE}
+
+        <!-- Footer -->
+        <footer class=" uk-overflow-hidden uk-position-relative">
+
+            <div class="uk-position-bottom uk-background-top-center uk-background-cover uk-overflow-visible uk-position-z-index uk-hidden@m" style="height: 300px; background-image: url('/themes/stageone_4.0/assets/images/Pattern-Mobile-Footer.svg')">
+            </div>
+
+            <div class="uk-position-bottom-right uk-overflow-visible uk-position-z-index uk-width-4-5@l uk-visible@m">
+                <img src="/themes/stageone_4.0/assets/images/Pattern-Footer.svg" alt="Ergotherapie" />
+            </div>
+
+            <div class="uk-section uk-section-large uk-position-relative uk-position-z-index">
+                <div class="uk-container">
+                    <div class="uk-grid uk-grid-large" data-uk-grid>
+
+                        <div class="uk-width-1-2@s uk-width-2-5@m">
+                            <p>
+                                <span class="color-base-a"><strong>{CONTACT_COMPANY}</strong></span><br/>
+                                dipl. Ergotherapeutin HF<br/>
+                            </p>
+
+                            <p>
+                                {CONTACT_ADDRESS}<br/>
+                                {CONTACT_ZIP} {CONTACT_PLACE}<br/>
+                                {CONTACT_PHONE}<br/>
+                            </p>
+
+                            <a href="mailto:{CONTACT_EMAIL}" target="_blank" >{CONTACT_EMAIL}</a>
+                        </div>
+
+                        <div class="uk-width-1-2@s uk-width-3-5@m">
+                            {BLOCK_RANDOMIZER}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="uk-section uk-section-large uk-text-small uk-position-relative uk-position-z-index uk-light uk-hidden@m">
+
+                <div class="uk-container">
+
+                    <div class="uk-width-expand uk-flex uk-flex-between@s uk-grid uk-grid-collapse uk-grid-stack" data-uk-grid>
+
+                        <div class="uk-width-1-1 uk-margin-medium-bottom uk-text-small">
+                            <a href="{NODE_IMPRINT}" class="whitespace-nowrap uk-button uk-button-text uk-light uk-link-reset uk-margin-small-right">Impressum</a>
+                            <a href="{NODE_PRIVACY}" class="whitespace-nowrap uk-button uk-button-text uk-light uk-link-reset uk-margin-small-right">Datenschutz</a>
+                            <a href="{NODE_CONTACT_7}" class="whitespace-nowrap uk-button uk-button-text uk-light uk-link-reset">Kontakt</a>
+                        </div>
+
+                        <div class="uk-width-1-1 uk-first-column">
+                            Copyright 2020 © Nordic Ergo<br/>
+                            <span class="uk-text-meta uk-link-reset"><a href="https://www.stageone.ch" target="_blank" class="whitespace-nowrap">Design & Code by Stageone</a></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="uk-section uk-section-small uk-text-small uk-position-relative uk-position-z-index uk-visible@m" >
+
+                <div class="uk-container uk-margin-xlarge-top">
+
+                    <div class="uk-width-expand uk-flex uk-flex-between@m uk-grid uk-grid-collapse uk-grid-stack" data-uk-grid>
+
+                        <div class="uk-width-1-1 uk-width-expand@m">
+                            Copyright 2020 © Nordic Ergo<br/>
+                            <span class="uk-text-meta uk-link-reset"><a href="https://www.stageone.ch" target="_blank" class="whitespace-nowrap">Design & Code by Stageone</a></span>
+                        </div>
+
+                        <div class="uk-width-1-1 uk-width-expand@m uk-flex uk-flex-right@m uk-flex-bottom   ">
+                            <a href="{NODE_IMPRINT}" class="whitespace-nowrap uk-button uk-button-text uk-light ">Impressum</a>
+                            <a href="{NODE_PRIVACY}" class="whitespace-nowrap uk-button uk-button-text uk-light uk-margin-large-left">Datenschutz</a>
+                            <a href="{NODE_CONTACT_7}" class="whitespace-nowrap uk-button uk-button-text uk-light uk-margin-large-left">Kontakt</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </footer>
+
+
+        <!-- Modals -->
+        <div id="mobile-navigation-modal" data-uk-modal >
+            <div class="uk-modal-dialog uk-background-cover uk-background-top-left uk-background-fixed uk-light rounded-corners uk-overflow-hidden" style="background-image: url('/themes/stageone_4.0/assets/images/Pattern-Background.jpg');">
+
+                <button class="uk-modal-close-default" type="button" data-uk-close></button>
+
+                <div class="uk-modal-header"></div>
+
+                <div class="uk-modal-body" data-uk-height-viewport="offset-bottom:40;">
+                    {NAVBAR2_FILE}
+                </div>
+
+                <div class="uk-modal-footer uk-background-secondary uk-text-small uk-flex uk-flex-wrap uk-flex-between@s">
+                    <span class="uk-margin-small-right">NORDIC&nbsp;ERGO</span><span>CECILIA&nbsp;Aström</span>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+

@@ -1,0 +1,1014 @@
+/*****************************************************
+*
+*     Base Config
+*
+******************************************************/
+
+//
+// Color
+//
+
+
+@color-a:                                       #5FBEBE;                                           // Custom Definition
+@color-b:                                       #5FBEBE;                                           // Custom Definition
+@color-c:                                       #5FBEBE;                                           // Custom Definition
+@color-d:                                       #5FBEBE;                                           // Custom Definition
+@color-e:                                       #EDF6F5;                                           // Custom Definition
+
+@color-base-a:                                  #5A6060;                                           // Custom Definition
+@color-base-b:                                  #6E6E6E;                                           // Custom Definition
+@color-base-c:                                  #B9B9B9;                                           // Custom Definition
+@color-base-d:                                  #F5F5F5;                                           // Custom Definition
+@color-base-e:                                  #ffffff;                                           // Custom Definition
+
+@color-success:                                 #5ea375;
+@color-warning:                                 #ab8d4c;
+@color-danger:                                  #aa5d5d;
+
+//
+// Typography
+//
+@font-primary:                                  'Prompt';
+@font-secondary:                                'Prompt';
+
+@font-thin:                                     @font-primary;
+@font-thin-italic:                              @font-primary;
+@font-thin-weight:                              100;
+
+@font-ultra-light:                              @font-primary;
+@font-ultra-light-italic:                       @font-primary;
+@font-ultra-light-weight:                       200;
+
+@font-light:                                    @font-primary;
+@font-light-italic:                             @font-primary;
+@font-light-weight:                             300;
+
+@font-regular:                                  @font-primary;
+@font-regular-italic:                           @font-primary;
+@font-regular-weight:                           400;
+
+@font-medium:                                   @font-primary;
+@font-medium-italic:                            @font-primary;
+@font-medium-weight:                            500;
+
+@font-semibold:                                 @font-primary;
+@font-semibold-italic:                          @font-primary;
+@font-semibold-weight:                          600;
+
+@font-bold:                                     @font-primary;
+@font-bold-italic:                              @font-primary;
+@font-bold-weight:                              700;
+
+@font-extra-bold:                               @font-primary;
+@font-extra-bold-italic:                        @font-primary;
+@font-extra-bold-weight:                        800;
+
+@font-black:                                    @font-primary;
+@font-black-italic:                             @font-primary;
+@font-black-weight:                             900;
+
+
+//
+// Corners
+//
+@global-border-radius:                         5px;
+
+
+/*****************************************************
+*
+*     Stageone UIKit Config
+*
+******************************************************/
+
+//
+// Variables
+//
+
+// Colors
+@global-color:                                  @color-base-a;
+@global-emphasis-color:                         @color-base-b;
+@global-muted-color:                            @color-base-c;
+
+@global-link-color:                             @color-b;
+@global-link-hover-color:                       @color-base-a;
+
+@global-inverse-color:                          @color-base-e;
+
+
+// Inverse
+@inverse-global-color-mode:                     light;
+
+@inverse-global-color:                          fade(@global-inverse-color, 70%);
+@inverse-global-emphasis-color:                 @global-inverse-color;
+@inverse-global-muted-color:                    fade(@global-inverse-color, 50%);
+@inverse-global-inverse-color:                  @global-color;
+
+@inverse-global-primary-background:             @global-inverse-color;
+@inverse-global-muted-background:               fade(@global-inverse-color, 10%);
+
+@inverse-global-border:                         fade(@global-inverse-color, 20%);
+
+//
+// Close icon
+//
+@close-color:                                   @color-b;
+@close-hover-color:                             @color-a;
+
+// Backgrounds
+@global-background:                             @color-base-e;
+
+@base-body-background:                          @global-background;
+@global-muted-background:                       @color-d;
+@global-primary-background:                     @color-c;
+@global-secondary-background:                   @color-b;
+
+@global-success-background:                     @color-success;
+@global-warning-background:                     @color-warning;
+@global-danger-background:                      @color-danger;
+
+@base-selection-background:                     @global-color;
+@base-selection-color:                          @global-inverse-color;
+
+//
+// Typography
+//
+
+@font-size:                                     16px;
+@line-height:                                   2;
+@letter-spacing:                                0.01em;
+
+@medium-letter-spacing:                         0.05em;                           // Custom Definition
+@large-letter-spacing:                          0.2em;                            // Custom Definition
+
+@global-xxlarge-font-size:                      2.75em;
+@global-xlarge-font-size:                       1.75em;
+@global-large-font-size:                        1.6em;
+@global-medium-font-size:                       1.3em;
+@global-font-size:                              @font-size;
+@global-small-font-size:                        0.925em;
+
+@global-font-family:                            @font-primary, sans-serif;
+@secondary-font-family:                         @font-secondary, serif;
+@global-line-height:                            @line-height;
+
+@base-small-font-size:                          @global-small-font-size;
+@base-code-font-size:                           @global-small-font-size;
+@base-code-font-family:                         Consolas, monaco, monospace;
+@base-code-color:                               @global-danger-background;
+@base-em-color:                                 @global-color;
+@base-ins-background:                           @color-base-d;
+@base-ins-color:                                @global-color;
+@base-mark-background:                          @color-base-d;
+@base-mark-color:                               @global-color;
+@base-quote-font-style:                         italic;
+
+//
+// Text
+//
+@text-lead-font-size:                           @global-medium-font-size;
+@text-lead-line-height:                         1.75;
+@text-lead-color:                               @color-base-b;
+
+@text-meta-font-size:                           @global-small-font-size;
+@text-meta-line-height:                         1.3;
+@text-meta-color:                               lighten(@color-base-b,15%);
+
+@text-small-font-size:                          @global-small-font-size;
+@text-small-line-height:                        1.3;
+
+@text-large-font-size-l:                        @global-large-font-size;
+@text-large-font-size-m:                        @global-medium-font-size;
+@text-large-font-size:                          @global-medium-font-size;
+
+@text-large-line-height:                        1.3;
+
+@text-muted-color:                              @global-muted-color;
+@text-emphasis-color:                           @global-emphasis-color;
+@text-primary-color:                            @global-primary-background;
+@text-secondary-color:                          @global-secondary-background;
+@text-success-color:                            @global-success-background;
+@text-warning-color:                            @global-warning-background;
+@text-danger-color:                             @global-danger-background;
+
+@text-background-color:                         @global-primary-background;
+
+//
+// Links
+//
+@base-link-text-decoration:                     none;
+@base-link-hover-text-decoration:               none;
+
+//
+// Breakpoints
+//
+@breakpoint-xlarge:                             1500px; // Large Screens
+@breakpoint-large:                              1100px; // Desktop
+@breakpoint-medium:                             960px;  // Tablet Landscape
+@breakpoint-small:                              640px;  // Phone landscape
+
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+@global-xlarge-margin:                          90px;
+@global-large-margin:                           50px;
+@global-medium-margin:                          25px;
+@global-margin:                                 20px;
+@global-small-margin:                           10px;
+@global-xsmall-margin:                          5px; // Custom Definition
+
+// Used in grid, column, container, align, card, padding
+@global-large-gutter:                           50px;
+@global-medium-gutter:                          35px;
+@global-gutter:                                 15px;
+@global-small-gutter:                           10px;
+
+@base-margin-vertical:                          @global-margin;
+
+// Screen Section (@ Large Screens)
+@section-xlarge-padding-vertical-l:             (2 * @global-xlarge-margin);  // Custom Definition
+@section-large-padding-vertical-l:              (1.5 * @global-xlarge-margin);  // Custom Definition
+@section-padding-vertical-l:                    @global-xlarge-margin;                            // Custom Definition
+@section-small-padding-vertical-l:              @global-large-margin;                             // Custom Definition
+@section-xsmall-padding-vertical-l:             @global-small-margin;                             // Custom Definition
+
+// Screen Section (@ Medium Screens)
+@section-xlarge-padding-vertical-m:             (@global-large-margin + @global-xlarge-margin);
+@section-large-padding-vertical-m:              @global-xlarge-margin;
+@section-padding-vertical-m:                    @global-large-margin;
+@section-small-padding-vertical-m:              (1.5 * @global-medium-margin);                    // Custom Definition
+@section-xsmall-padding-vertical-m:             @global-small-margin;                             // Custom Definition
+
+// Screen Section (@ Small Screens)
+@section-xlarge-padding-vertical:               @global-xlarge-margin;
+@section-large-padding-vertical:                @global-large-margin;
+@section-padding-vertical:                      @global-medium-margin;
+@section-small-padding-vertical:                @global-margin;
+@section-xsmall-padding-vertical:               @global-xsmall-margin;
+
+// Section Backgrounds
+@section-default-background:                    @global-background;
+@section-muted-background:                      @global-muted-background;
+
+@section-primary-background:                    @global-primary-background;
+@section-primary-color-mode:                    light;
+
+@section-secondary-background:                  @global-secondary-background;
+@section-secondary-color-mode:                  light;
+
+
+//
+// Container
+//
+@container-expand-max-width:                    1600px; // Custom Definition
+@container-large-max-width:                     1600px;
+@container-max-width:                           1300px;
+@container-small-max-width:                     900px;
+@container-xsmall-max-width:                    350px;
+
+@container-padding-horizontal-l:                140px; // Custom Definition
+@container-padding-horizontal-m:                75px;
+@container-padding-horizontal-s:                75px;
+@container-padding-horizontal:                  25px;
+
+//
+// Position
+//
+@position-small-margin:                         @global-small-gutter;
+@position-medium-margin:                        @global-gutter;
+@position-large-margin:                         @global-medium-gutter;
+@position-large-margin-l:                       @global-large-gutter;
+
+//
+// Body
+//
+@base-body-font-family:                         @font-regular-italic;
+@base-body-font-weight:                         @font-regular-weight;
+@body-font-weight:                              @font-regular-weight;
+@base-strong-font-weight:                       @font-bold-weight;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+@base-body-color:                               @global-emphasis-color;
+
+
+//
+// Hr
+//
+@base-hr-margin-vertical:                       @global-margin;
+@base-hr-border-width:                          @global-border-width;
+@base-hr-border:                                @global-border;
+
+
+//
+// Headings
+//
+
+@base-heading-font-family:                      @font-primary;
+@base-heading-font-weight:                      @font-bold-weight;
+@heading-font-weight:                           @font-bold-weight;
+@base-heading-color:                            @color-base-a;
+@base-heading-text-transform:                   none;
+@base-heading-margin-top:                       @global-medium-margin;
+
+
+// Heading Sizes (@ Small Screens)
+@heading-2xlarge-font-size:                     @heading-xlarge-font-size-m;
+@heading-xlarge-font-size:                      @heading-large-font-size-m;
+@heading-large-font-size:                       @heading-large-font-size-m * 0.85;
+@heading-medium-font-size:                      2.75em;
+@heading-small-font-size:                       @heading-small-font-size-m * 0.8;
+
+@base-h1-font-size:                             @global-xxlarge-font-size * 0.5;
+@base-h2-font-size:                             @global-xlarge-font-size * 0.6;
+@base-h3-font-size:                             @global-medium-font-size * 0.8;
+@base-h4-font-size:                             @global-large-font-size * 0.8;
+@base-h5-font-size:                             @global-font-size;
+@base-h6-font-size:                             @global-small-font-size * 0.9;
+
+
+// Heading Sizes (@ Medium Screens)
+@heading-2xlarge-font-size-m:                   @heading-xlarge-font-size-l;
+@heading-xlarge-font-size-m:                    @heading-large-font-size-l;
+@heading-large-font-size-m:                     @heading-medium-font-size-l;
+@heading-medium-font-size-m:                    @heading-medium-font-size * 1.1;
+@heading-small-font-size-m:                     @heading-medium-font-size-l * 0.8125;
+
+@base-h1-font-size-m:                           (1 * @global-xxlarge-font-size);
+@base-h2-font-size-m:                           @global-xlarge-font-size * 0.75;
+@base-h3-font-size-m:                           @global-large-font-size;      // Custom Definition
+@base-h4-font-size-m:                           @global-medium-font-size;     // Custom Definition
+
+
+// Heading Sizes (@ Large Screens)
+@heading-2xlarge-font-size-l:                   11rem;
+@heading-xlarge-font-size-l:                    8rem;
+@heading-large-font-size-l:                     6rem;
+@heading-medium-font-size-l:                    @heading-medium-font-size-m * 1.1;
+
+@heading-small-line-height:                     1.2;
+@heading-small-margin-bottom:                   @base-margin-vertical;          // Custom Definition
+
+@heading-medium-line-height:                    1.1;
+@heading-medium-margin-bottom:                  @base-margin-vertical;          // Custom Definition
+
+@heading-large-line-height:                     1.1;
+@heading-large-margin-bottom:                   @base-margin-vertical;          // Custom Definition
+
+@heading-xlarge-line-height:                    1.25;
+@heading-xlarge-margin-bottom:                  @base-margin-vertical;          // Custom Definition
+
+@heading-2xlarge-line-height:                   1;
+@heading-2xlarge-margin-bottom:                 @base-margin-vertical;          // Custom Definition
+
+@base-h1-font-size-l:                           @global-xxlarge-font-size;      // Custom Definition
+@base-h1-line-height:                           1.15;
+@base-h1-margin-bottom:                         @base-margin-vertical;          // Custom Definition
+
+@base-h2-font-size-l:                           @global-xlarge-font-size;       // Custom Definition
+@base-h2-line-height:                           1.1;
+@base-h2-margin-bottom:                         @global-medium-margin;           // Custom Definition
+
+@base-h3-line-height:                           1.1;
+@base-h3-margin-bottom:                         15px;                           // Custom Definition
+
+@base-h4-line-height:                           1.1;
+@base-h4-margin-bottom:                         5px;                           // Custom Definition
+
+@base-h5-line-height:                           1.1;
+@base-h5-margin-bottom:                         5px;                           // Custom Definition
+
+@base-h6-line-height:                           1.1;
+@base-h6-margin-bottom:                         5px;                           // Custom Definition
+
+
+//
+// Borders
+//
+
+@global-small-border-width:                     1px; // Custom Definition
+@global-border-width:                           1px;
+@global-medium-border-width:                    2px; // Custom Definition
+@global-large-border-width:                     10px; // Custom Definition
+@global-border:                                 @color-base-c;
+
+
+//
+// Box-Shadows
+//
+
+@global-small-box-shadow:                       0 1px 5px rgba(0,0,0,0.3);
+@global-medium-box-shadow:                      0 3px 10px rgba(0,0,0,0.3);
+@global-large-box-shadow:                       0 4px 15px rgba(0,0,0,0.4);
+@global-xlarge-box-shadow:                      0 4px 25px rgba(0,0,0,0.4);
+
+
+//
+// Animations
+//
+@animation-kenburns-duration:                   50s;
+
+//
+// Controls
+//
+
+@global-control-height:                         @global-line-height;
+@global-control-small-height:                   @global-line-height * 0.875;
+@global-control-large-height:                   5@global-line-height * 1.125;
+
+//
+// Dotnav
+//
+@dotnav-margin-horizontal:                      12px;
+@dotnav-margin-vertical:                        @dotnav-margin-horizontal;
+
+@dotnav-item-width:                             10px;
+@dotnav-item-height:                            @dotnav-item-width;
+@dotnav-item-border-radius:                     50%;
+
+@dotnav-item-background:                        @color-b;
+@dotnav-item-hover-background:                  @color-b;
+@dotnav-item-onclick-background:                @color-b;
+@dotnav-item-active-background:                 @color-a;
+
+@dotnav-item-background:                        @color-b;
+@dotnav-item-border-width:                      2px;
+
+@dotnav-item-border:                            @global-muted-color;
+@dotnav-item-hover-border:                      transparent;
+@dotnav-item-onclick-border:                    transparent;
+@dotnav-item-active-border:                     transparent;
+
+//
+// Accordion
+//
+@accordion-item-margin-top:                    12px;
+
+@accordion-title-font-size:                    @global-medium-font-size;
+@accordion-title-line-height:                  1.4;
+@accordion-title-color:                        @global-color;
+@accordion-title-hover-color:                  @global-link-hover-color;
+
+@accordion-content-margin-top:                 @global-margin;
+
+//
+// Navigation
+//
+@navbar-background:                             @global-background;
+
+@navbar-nav-item-height:                        50px;
+@navbar-nav-item-padding-horizontal:            25px;
+@navbar-nav-item-color:                         @color-base-a;
+@navbar-nav-item-font-size:                     0.875em;
+@navbar-nav-item-font-family:                   @global-font-family;
+@navbar-nav-item-hover-color:                   @color-a;
+@navbar-nav-item-onclick-color:                 @color-a;
+@navbar-nav-item-active-color:                  @color-a;
+
+@navbar-item-color:                             @global-color;
+
+@navbar-toggle-color:                           @global-muted-color;
+@navbar-toggle-hover-color:                     @global-color;
+
+@navbar-subtitle-font-size:                     @global-small-font-size;
+
+@navbar-dropdown-width:                         220px;
+@navbar-dropdown-margin:                        15px;
+@navbar-dropdown-padding:                       @navbar-nav-item-padding-horizontal @navbar-nav-item-padding-horizontal;
+@navbar-dropdown-background:                    @color-b;
+@navbar-dropdown-color:                         @color-e;
+@navbar-dropdown-grid-gutter-horizontal:        @global-gutter;
+@navbar-dropdown-grid-gutter-vertical:          (@navbar-dropdown-grid-gutter-horizontal * 2);
+
+@navbar-dropdown-dropbar-margin-top:            0;
+@navbar-dropdown-dropbar-margin-bottom:         @navbar-dropdown-dropbar-margin-top;
+
+@navbar-dropdown-nav-item-color:                @color-base-e;
+@navbar-dropdown-nav-item-hover-color:          @color-base-a;
+@navbar-dropdown-nav-item-active-color:         @color-base-a;
+@navbar-dropdown-nav-header-color:              @global-emphasis-color;
+@navbar-dropdown-nav-divider-border-width:      @global-border-width;
+@navbar-dropdown-nav-divider-border:            lighten(@global-border, 5%);
+@navbar-dropdown-nav-sublist-item-color:        @color-base-e;
+@navbar-dropdown-nav-sublist-item-hover-color:  @color-base-e;
+@navbar-dropdown-nav-sublist-item-active-color: @color-base-e;
+
+@nav-item-padding-vertical:                     2px;
+@nav-item-padding-horizontal:                   0;
+
+@nav-sublist-padding-vertical:                  8px;
+@nav-sublist-padding-left:                      15px;
+@nav-sublist-deeper-padding-left:               15px;
+@nav-sublist-item-padding-vertical:             2px;
+
+//
+// Dropdown
+//
+
+@dropdown-z-index:                              @global-z-index + 20;
+@dropdown-min-width:                            200px;
+@dropdown-padding:                              @global-gutter;
+@dropdown-background:                           darken(@color-e,2%);
+@dropdown-color:                                @color-b;
+@dropdown-margin:                               @navbar-dropdown-margin;
+
+@dropdown-nav-item-color:                       @color-b;
+@dropdown-nav-item-hover-color:                 @color-b;
+@dropdown-nav-header-color:                     @navbar-dropdown-nav-header-color;
+@dropdown-nav-divider-border-width:             @navbar-dropdown-nav-divider-border-width;
+@dropdown-nav-divider-border:                   @navbar-dropdown-nav-divider-border;
+@dropdown-nav-sublist-item-color:               @navbar-dropdown-nav-sublist-item-color;
+@dropdown-nav-sublist-item-hover-color:         @navbar-dropdown-nav-sublist-item-hover-color;
+
+//
+// Modal
+//
+@modal-background:                              rgba(255,255,255,0.75);
+
+@modal-padding-horizontal:                      @global-medium-margin;
+@modal-padding-horizontal-s:                    @global-medium-margin;
+@modal-padding-horizontal-m:                    @global-medium-margin;
+@modal-padding-vertical:                        @modal-padding-horizontal;
+@modal-padding-vertical-s:                      50px;
+
+@modal-dialog-width:                            600px;
+@modal-dialog-background:                       @global-background;
+
+@modal-container-width:                         380px;
+
+@modal-header-padding-horizontal:               @global-large-gutter + @global-small-gutter;
+@modal-header-padding-vertical:                 @global-gutter;
+@modal-header-background:                       transparent;
+
+@modal-body-padding-horizontal:                 @global-large-gutter + @global-small-gutter;
+@modal-body-padding-vertical:                   @global-large-gutter + @global-small-gutter;
+
+@modal-footer-padding-horizontal:               @global-large-gutter + @global-small-gutter;
+@modal-footer-padding-vertical:                 @global-gutter;
+@modal-footer-background:                       transparent;
+
+@modal-title-font-size:                         @global-xlarge-font-size;
+@modal-title-line-height:                       1.3;
+
+@modal-close-position:                          @global-margin;
+@modal-close-padding:                           0;
+
+@modal-close-outside-position:                  0;
+@modal-close-outside-translate:                 100%;
+@modal-close-outside-color:                     lighten(@global-inverse-color, 20%);
+@modal-close-outside-hover-color:               @global-inverse-color;
+
+
+//
+// Offcanvas
+//
+@offcanvas-z-index:                             @global-z-index + 100;
+
+@offcanvas-bar-width:                           100%;
+@offcanvas-bar-padding-vertical:                0;
+@offcanvas-bar-padding-horizontal:              0;
+@offcanvas-bar-background:                      none;
+@offcanvas-bar-color-mode:                      light;
+
+@offcanvas-bar-width-m:                         95%;
+@offcanvas-bar-padding-vertical-m:              0;
+@offcanvas-bar-padding-horizontal-m:            0;
+
+@offcanvas-close-position:                      20px;
+@offcanvas-close-padding:                       5px;
+
+@offcanvas-overlay-background:                  fade(@color-c,100%);
+
+
+//
+// Overlay
+//
+
+@overlay-padding-horizontal:                    @global-gutter;
+@overlay-padding-vertical:                      @global-gutter;
+
+@overlay-default-background:                    fade(@color-base-e, 80%);
+
+@overlay-primary-background:                    fade(@color-base-b, 80%);
+@overlay-primary-color-mode:                    dark;
+
+//
+// Lightbox
+//
+
+@lightbox-z-index:                              @global-z-index + 3000;
+@lightbox-background:                           @color-base-b;
+
+@lightbox-item-color:                           rgba(255,255,255,0.7);
+@lightbox-item-max-width:                       100vw;
+@lightbox-item-max-height:                      100vh;
+
+@lightbox-toolbar-padding-vertical:             60px;
+@lightbox-toolbar-padding-horizontal:           60px;
+@lightbox-toolbar-background:                   none;
+@lightbox-toolbar-color:                        @color-base-e;
+
+@lightbox-toolbar-icon-padding:                 0px;
+@lightbox-toolbar-icon-color:                   @color-base-e;
+
+@lightbox-toolbar-icon-hover-color:             @color-a;
+
+@lightbox-button-size:                          80px;
+@lightbox-button-background:                    none;
+@lightbox-button-color:                         @color-base-e;
+
+@lightbox-button-hover-color:                   @color-a;
+
+//
+// Card
+//
+
+// Card Padding (@ Large Screens)
+@card-header-padding-horizontal-l:              @global-large-gutter;
+@card-header-padding-vertical-l:                round(@global-medium-gutter * 0.75);
+
+@card-body-padding-horizontal-l:                @global-large-gutter;
+@card-body-padding-vertical-l:                  @global-large-gutter;
+
+@card-footer-padding-horizontal-l:              @global-medium-gutter;
+@card-footer-padding-vertical-l:                round(@global-medium-gutter * 0.75);
+
+
+// Card Padding (@ Small Screens)
+@card-header-padding-horizontal:                @global-medium-gutter;
+@card-header-padding-vertical:                  round(@global-medium-gutter * 0.75);
+
+@card-body-padding-horizontal:                  @global-medium-gutter;
+@card-body-padding-vertical:                    @global-medium-gutter;
+
+@card-footer-padding-horizontal:                @global-medium-gutter;
+@card-footer-padding-vertical:                   round(@global-medium-gutter * 0.75);
+
+
+// Small Card Padding (@ Small Screens)
+@card-small-header-padding-horizontal:          @global-medium-margin;
+@card-small-header-padding-vertical:            round(@global-medium-margin * 0.9);
+
+@card-small-body-padding-horizontal:            @global-medium-margin;
+@card-small-body-padding-vertical:              @global-medium-gutter;
+
+@card-small-footer-padding-horizontal:          @global-medium-margin;
+@card-small-footer-padding-vertical:             round(@global-medium-gutter * 0.9);
+
+
+// Large Card Padding (@ Large Screens)
+@card-large-header-padding-horizontal-l:        @global-large-gutter;
+@card-large-header-padding-vertical-l:          round(@global-large-gutter * 0.8);
+
+@card-large-body-padding-horizontal-l:          @global-large-gutter;
+@card-large-body-padding-vertical-l:            @global-large-gutter;
+
+@card-large-footer-padding-horizontal-l:        @global-large-gutter;
+@card-large-footer-padding-vertical-l:          round(@global-large-gutter * 0.8);
+
+
+@card-title-font-size:                          @global-medium-font-size;
+@card-title-line-height:                        1.2;
+
+@card-badge-top:                                15px;
+@card-badge-right:                              20px;
+
+@card-hover-background:                         darken(@global-muted-background,5%);
+
+@card-default-background:                       @color-base-e;
+@card-default-color:                            @global-color;
+@card-default-title-color:                      @global-color;
+@card-default-hover-background:                 @color-e;
+
+@card-primary-background:                       @global-primary-background;
+@card-primary-color:                            @global-inverse-color;
+@card-primary-title-color:                      @card-primary-color;
+@card-primary-hover-background:                 darken(@card-primary-background, 5%);
+@card-primary-color-mode:                       light;
+
+@card-secondary-background:                     @global-secondary-background;
+@card-secondary-color:                          @global-color;
+@card-secondary-title-color:                    @global-color;
+@card-secondary-hover-background:               darken(@card-secondary-background, 5%);
+@card-secondary-color-mode:                     light;
+
+
+
+
+//
+// Buttons
+//
+@button-line-height:                            1.5em;
+@button-small-line-height:                      @global-control-small-height;
+@button-large-line-height:                      @global-control-large-height;
+
+@button-font-size:                              @global-small-font-size;
+@button-small-font-size:                        @global-small-font-size * 0.9;
+@button-large-font-size:                        @global-small-font-size * 1.1;
+
+@button-padding-horizontal:                     @global-medium-gutter;
+@button-small-padding-horizontal:               @global-medium-gutter;
+@button-large-padding-horizontal:               (@global-large-gutter + 20);
+
+@button-default-background:                     transparent;
+@button-default-color:                          @color-b;
+@button-default-hover-background:               darken(@color-a,20%);
+@button-default-hover-color:                    @global-inverse-color;
+@button-default-active-background:              darken(@color-a,20%);
+@button-default-active-color:                   @global-inverse-color;
+
+@button-primary-background:                     @color-c;
+@button-primary-color:                          @global-inverse-color;
+@button-primary-hover-background:               darken(@color-a,20%);
+@button-primary-hover-color:                    @global-inverse-color;
+@button-primary-active-background:              darken(@color-a,20%);
+@button-primary-active-color:                   @global-inverse-color;
+
+@button-secondary-background:                   @color-base-a;
+@button-secondary-color:                        @global-inverse-color;
+@button-secondary-hover-background:             darken(@color-a,20%);
+@button-secondary-hover-color:                  @global-inverse-color;
+@button-secondary-active-background:            darken(@color-a,20%);
+@button-secondary-active-color:                 @global-inverse-color;
+
+@button-danger-background:                      @global-danger-background;
+@button-danger-color:                           @global-inverse-color;
+@button-danger-hover-background:                darken(@button-danger-background, 10%);
+@button-danger-hover-color:                     @global-inverse-color;
+@button-danger-active-background:               @global-danger-background;
+@button-danger-active-color:                    @global-danger-background;
+
+@button-disabled-background:                    @global-muted-background;
+@button-disabled-color:                         @global-muted-color;
+
+@button-text-line-height:                       @global-line-height;
+@button-text-color:                             @color-c;
+@button-text-hover-color:                       @global-link-hover-color;
+@button-text-disabled-color:                    @global-muted-color;
+
+@button-link-line-height:                       @global-line-height;
+@button-link-color:                             @color-b;
+@button-link-hover-color:                       @global-link-hover-color;
+@button-link-hover-text-decoration:             none;
+@button-link-disabled-color:                    @global-muted-color;
+
+//
+// Buttons inverse
+//
+@inverse-button-default-background:            transparent;
+@inverse-button-default-color:                 @global-inverse-color;
+@inverse-button-default-hover-background:      @color-base-e;
+@inverse-button-default-hover-color:           @color-b;
+@inverse-button-default-active-background:     @color-base-e;
+@inverse-button-default-active-color:          @global-inverse-color;
+
+@inverse-button-primary-background:            @color-c;
+@inverse-button-primary-color:                 @global-inverse-color;
+@inverse-button-primary-hover-background:      @color-base-e;
+@inverse-button-primary-hover-color:           @color-b;
+@inverse-button-primary-active-background:     @color-base-e;
+@inverse-button-primary-active-color:          @color-base-e;
+
+@inverse-button-secondary-background:          @color-d;
+@inverse-button-secondary-color:               @color-b;
+@inverse-button-secondary-hover-background:    @color-base-e;
+@inverse-button-secondary-hover-color:         @color-b;
+@inverse-button-secondary-active-background:   @color-base-e;
+@inverse-button-secondary-active-color:        @color-base-e;
+
+@inverse-button-text-color:                    @color-c;
+@inverse-button-text-hover-color:              @global-inverse-color;
+@inverse-button-text-disabled-color:           @global-muted-color;
+
+@inverse-button-link-color:                    @color-d;
+@inverse-button-link-hover-color:              @global-inverse-color;
+
+
+//
+// Table
+//
+@table-margin-vertical:                         @global-margin;
+
+@table-cell-padding-vertical:                   16px;
+@table-cell-padding-horizontal:                 12px;
+
+@table-header-cell-font-size:                   @global-font-size;
+@table-header-cell-font-weight:                 bold;
+@table-header-cell-color:                       @global-color;
+
+@table-footer-font-size:                        @global-small-font-size;
+
+@table-caption-font-size:                       @global-small-font-size;
+@table-caption-color:                           @global-muted-color;
+
+@table-row-active-background:                   darken(@color-base-e,0%);
+
+@table-divider-border-width:                    @global-border-width;
+@table-divider-border:                          @global-border;
+
+@table-striped-row-background:                  @color-base-d;
+
+@table-hover-row-background:                    @table-row-active-background;
+
+@table-small-cell-padding-vertical:             10px;
+@table-small-cell-padding-horizontal:           12px;
+
+@table-large-cell-padding-vertical:             22px;
+@table-large-cell-padding-horizontal:           12px;
+
+@table-expand-min-width:                        150px;
+
+
+//
+// Search
+//
+@search-color:                                      @global-color;
+@search-placeholder-color:                          @form-placeholder-color;
+
+@search-icon-color:                                 @global-color;
+
+@search-default-width:                              180px;
+@search-default-height:                             @global-control-height;
+@search-default-padding-horizontal:                 6px;
+@search-default-background:                         @global-muted-background;
+@search-default-focus-background:                   @search-default-background;
+
+@search-default-icon-width:                         @global-control-height;
+
+@search-navbar-width:                               400px;
+@search-navbar-height:                              40px;
+@search-navbar-background:                          transparent;
+@search-navbar-font-size:                           @global-large-font-size;
+
+@search-navbar-icon-width:                          40px;
+
+@search-large-width:                                500px;
+@search-large-height:                               80px;
+@search-large-background:                           transparent;
+@search-large-font-size:                            @global-xxlarge-font-size;
+
+@search-large-icon-width:                           80px;
+
+@search-toggle-color:                               @global-muted-color;
+@search-toggle-hover-color:                         @global-color;
+
+
+//
+// Tooltip
+//
+
+@tooltip-z-index:                               @global-z-index + 30;
+@tooltip-max-width:                             250px;
+@tooltip-padding-vertical:                      5px;
+@tooltip-padding-horizontal:                    10px;
+@tooltip-background:                            @color-a;
+@tooltip-border-radius:                         4px;
+@tooltip-color:                                 @global-inverse-color;
+@tooltip-font-size:                             13px;
+
+@tooltip-margin:                                15px;
+
+//
+// Label
+//
+@label-padding-vertical:                        1px;
+@label-padding-horizontal:                      8px;
+@label-background:                              transparent;
+@label-line-height:                             @global-line-height;
+@label-font-size:                               @global-small-font-size;
+@label-color:                                   @color-c;
+
+@label-success-background:                      @global-success-background;
+@label-success-color:                           @global-inverse-color;
+@label-warning-background:                      @global-warning-background;
+@label-warning-color:                           @global-inverse-color;
+@label-danger-background:                       @global-danger-background;
+@label-danger-color:                            @global-inverse-color;
+
+//
+// Forms
+//
+
+@form-height:                                   50px;
+@form-line-height:                              @form-height;
+@form-padding-horizontal:                       15px;
+@form-padding-vertical:                         10px;
+
+@form-background:                               @color-base-e;
+@form-focus-color:                              @color-d;
+
+@form-focus-background:                         @color-base-e;
+@form-focus-color:                              @color-b;
+
+@form-disabled-background:                      @global-muted-background;
+@form-disabled-color:                           @global-muted-color;
+
+@form-placeholder-color:                        @color-base-c;
+
+@form-small-height:                             @global-control-small-height;
+@form-small-padding-horizontal:                 8px;
+@form-small-line-height:                        @form-small-height;
+@form-small-font-size:                          @global-small-font-size;
+
+@form-large-height:                             @global-control-large-height;
+@form-large-padding-horizontal:                 12px;
+@form-large-line-height:                        @form-large-height;
+@form-large-font-size:                          @global-medium-font-size;
+
+@form-danger-color:                             @global-danger-background;
+@form-success-color:                            @global-success-background;
+
+@form-width-xsmall:                             50px;
+@form-width-small:                              130px;
+@form-width-medium:                             200px;
+@form-width-large:                              500px;
+
+@form-select-padding-right:                     20px;
+@form-select-icon-color:                        @global-color;
+@form-select-option-color:                      #444;
+@form-select-disabled-icon-color:               @global-muted-color;
+
+@form-datalist-padding-right:                   20px;
+@form-datalist-icon-color:                      @global-color;
+
+@form-radio-size:                               16px;
+@form-radio-margin-top:                         -4px;
+@form-radio-background:                         darken(@global-muted-background, 5%);
+
+@form-radio-checked-background:                 @global-primary-background;
+@form-radio-checked-icon-color:                 @global-inverse-color;
+
+@form-radio-checked-focus-background:           darken(@global-primary-background, 10%);
+
+@form-radio-disabled-background:                @global-muted-background;
+@form-radio-disabled-icon-color:                @global-muted-color;
+
+@form-legend-font-size:                         @global-large-font-size;
+@form-legend-line-height:                       1.4;
+
+@form-stacked-margin-bottom:                    @global-small-margin;
+
+@form-horizontal-label-width:                   200px;
+@form-horizontal-label-margin-top:              7px;
+@form-horizontal-controls-margin-left:          215px;
+@form-horizontal-controls-text-padding-top:     7px;
+
+@form-icon-width:                               @form-height;
+@form-icon-color:                               @global-muted-color;
+@form-icon-hover-color:                         @global-color;
+
+@internal-form-select-image:                     "../../images/backgrounds/form-select.svg";
+@internal-form-datalist-image:                   "../../images/backgrounds/form-datalist.svg";
+@internal-form-radio-image:                      "../../images/backgrounds/form-radio.svg";
+@internal-form-checkbox-image:                   "../../images/backgrounds/form-checkbox.svg";
+@internal-form-checkbox-indeterminate-image:     "../../images/backgrounds/form-checkbox-indeterminate.svg";
+
+//
+// List
+//
+@base-list-padding-left:                        30px;
+@list-margin-top:                               3px;
+
+@list-nested-padding-left:                      @global-gutter;
+
+@list-divider-margin-top:                       @global-small-margin;
+@list-divider-border-width:                     @global-small-border-width;
+@list-divider-border:                           @global-border;
+
+@list-striped-padding-vertical:                 @global-small-margin;
+@list-striped-padding-horizontal:               @global-small-margin;
+@list-striped-background:                       @global-muted-background;
+
+@list-bullet-width:                             (@global-line-height * 1em);
+@list-bullet-height:                            @list-bullet-width;
+@list-bullet-margin-right:                      @global-small-margin;
+@list-bullet-icon-color:                        @global-color;
+
+@list-large-margin-top:                         @global-margin;
+@list-large-divider-margin-top:                 @global-margin;
+@list-large-striped-padding-vertical:           @global-margin;
+@list-large-striped-padding-horizontal:         @global-small-margin;
+
+@internal-list-bullet-image:                    "/themes/stageone_4.0/assets/images/list-bullet-color-a.svg";
+
+//
+// Blockquote
+//
+@base-blockquote-font-family:                   @secondary-font-family;     // Custom Definition
+@base-blockquote-font-weight:                   @font-semibold-weight;      // Custom Definition
+@base-blockquote-font-size:                     1.1em;
+@base-blockquote-line-height:                   @global-line-height;
+@base-blockquote-font-style:                    normal;
+@base-blockquote-margin-vertical:               @global-margin;
+@base-blockquote-footer-margin-top:             @global-small-margin;
+@base-blockquote-footer-font-size:              @global-small-font-size;
+@base-blockquote-footer-line-height:            1.5;
+
+//
+// Pre
+//
+@base-pre-font-size:                            @global-small-font-size;
+@base-pre-line-height:                          1.5;
+@base-pre-font-family:                          @base-code-font-family;
+@base-pre-color:                                @global-color;
