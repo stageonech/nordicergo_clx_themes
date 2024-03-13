@@ -92,6 +92,7 @@
                 // Init the plugin
                 var soCookies = $.soCookies();
 
+                /*
                 //
                 // Google Analytics
                 //
@@ -128,6 +129,7 @@
                         gtag('config', googleAnalyticsID);
                     }, 0);
                 }
+                */
             }
         }
 
