@@ -1,4 +1,4 @@
-/*! UIkit 3.4.2 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+/*! UIkit 3.4.2 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
 /*****************************************************
 *
 *     Read me
@@ -12932,4 +12932,7 @@ label.focus-state-label {
   #first-section {
     margin-top: 120px;
   }
+}
+.is-explorer-12 {
+  border: 1px solid red;
 }
