@@ -336,3 +336,47 @@ li.level-1.uk-open .animated-chevron div .line-right {
   }
 
 }
+
+/*****************************************************
+*
+*     Switcher Button
+*
+******************************************************/
+.switcher-container,
+.switcher-checkbox-container {
+
+  width:50px;
+  height:30px;
+  cursor: pointer;
+
+}
+
+.switcher-button {
+
+  opacity: 1;
+  visibility: visible;
+
+
+  &.switch-off > * {
+    border-radius: 100%;
+  }
+
+  &.switch-off.switcher-background > * {
+    background: @global-warning-background;
+  }
+
+  &.switch-on > * {
+    border-radius: 100%;
+  }
+
+  &.switch-on.switcher-background > * {
+    background: @global-success-background;
+  }
+
+
+  &.uk-active {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+}

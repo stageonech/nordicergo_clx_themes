@@ -16,7 +16,8 @@
      ******************************************************/
     var log = false;
     var devMode = false;
-    var googleApiKey = '';
+    var googleApiKeyOld = 'UA-165038046-1';
+    var googleAnalyticsID = 'G-LLS1TMT5CQ';
 
     /*****************************************************
      *
@@ -82,6 +83,53 @@
     //
 
     $(document).ready(function(){
+        //
+        // Cookie Plugin
+        //
+        if(typeof cx != "undefined") {
+            if (typeof cx.privacy != "undefined") {
+
+                // Init the plugin
+                var soCookies = $.soCookies();
+
+                //
+                // Google Analytics
+                //
+                var identifier = 'google-analytics-4';
+                var optIn = 'ga-opt-in';
+                var optOut = 'ga-opt-out';
+
+                var ga4 = soCookies.clxCookieSelectionTrigger(identifier, optIn, optOut);
+
+
+                // Google Analytics by loading
+                if (ga4.identifier == 'google-analytics-4' && ga4.opt == 'ga-opt-in') {
+                    cookieFriendlyGALoading();
+                }
+
+                // Google Analytics by cookie banner event
+                $(window).on("customCookieSelectionListener", function (event, pData) {
+                    if (pData.identifier == 'google-analytics-4' && pData.opt == 'ga-opt-in') {
+                        cookieFriendlyGALoading();
+                    }
+                });
+
+                // Load GA4
+                function cookieFriendlyGALoading() {
+                    setTimeout(function() { // Avoid timing problems
+                        var script = document.createElement('script');
+                        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleAnalyticsID + '&callback=googleGAInit';
+                        script.async = true;
+                        document.head.appendChild(script);
+
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', googleAnalyticsID);
+                    }, 0);
+                }
+            }
+        }
 
         //
         // Init Stageone Custom Plugins

@@ -1,0 +1,174 @@
+<div id="cookie-banner-icon" alt="Cookie Banner" class="uk-position-fixed uk-position-bottom-left" style="width: 24px; height: 24px;z-index: 100001;left:10px; bottom:10px;" data-uk-toggle="target: #cookie-banner; cls: uk-hidden;" >
+    <a href="#" class="uk-link-reset uk-border-circle uk-background-default uk-display-block" style="padding:3px;">
+        <img src="/themes/stageone_4.0/assets/images/cookie-banner-icon.svg" class="uk-display-block" alt="Cookie Banner Icon">
+    </a>
+</div>
+
+
+<div  id="cookie-note" class="uk-position-fixed uk-position-bottom-left uk-position-small" style="z-index: 100002; max-width: 450px;width:98%;margin:1%;line-height: 1.1em; ">
+
+    <div  class="uk-card uk-card-small uk-card-default uk-box-shadow-small rounded-corners">
+
+        <div  id="cookie-banner" class="uk-hidden uk-card uk-card-default uk-card-body uk-position-relative rounded-corners">
+
+            <div class="uk-margin-remove font-bold uk-text-small">{TXT_PRIVACY_COOKIE_NOTE_TITLE}</div>
+            <p class="uk-margin-remove-top uk-text-very-small" >
+
+                {TXT_PRIVACY_COOKIE_NOTE_TEXT_2022}
+
+                {TXT_PRIVACY_COOKIE_NOTE_PRE_LINK_2022}
+
+                <a href="{NODE_PRIVACY}">{TXT_PRIVACY_COOKIE_NOTE_LINK_2022}</a>
+
+                <!--
+                {TXT_PRIVACY_COOKIE_NOTE_POST_LINK_2022}
+                -->
+
+            </p>
+
+            <div class="uk-grid uk-grid-small uk-child-width-1-2@s">
+
+                <div class="uk-margin-xsmall-top uk-hidden">
+                    <button id="cookie-note-2022-nok" type="button" class="uk-button uk-button-small uk-button-default  uk-width-expand " data-uk-toggle="target: #cookie-banner; cls: uk-hidden;" >{TXT_PRIVACY_COOKIE_NOTE_BUTTON_NOK}</button>
+                </div>
+
+                <div class="uk-margin-xsmall-top">
+                    <button id="cookie-note-2022-details" type="button" class="uk-button uk-button-small uk-button-secondary  uk-width-expand " data-uk-toggle="target: #cookie-settings-popup; cls: uk-hidden;">{TXT_PRIVACY_COOKIE_NOTE_BUTTON_SETTINGS}</button>
+                </div>
+
+                <div class="uk-margin-xsmall-top">
+                    <button id="cookie-note-2022-ok" type="button" class="uk-button uk-button-small uk-button-primary  uk-width-expand " data-uk-toggle="target: #cookie-banner; cls: uk-hidden;" >{TXT_PRIVACY_COOKIE_NOTE_BUTTON_OK}</button>
+                </div>
+            </div>
+
+
+            <div id="cookie-settings-popup"  class="uk-hidden uk-card uk-card-small uk-margin-top" >
+
+                <div class="">
+
+                    <ul class="uk-list uk-list-divider uk-padding-remove-left" data-uk-accordion="multiple: false;toggle: .uk-accordion-title-cat;">
+
+                        <!-- BEGIN cookie_category -->
+                        <li class="cookie-class-list-cookie uk-padding-remove-bottom">
+
+                            <div class="uk-flex uk-flex-between uk-flex-middle">
+                                <a href="#" class="uk-accordion-title-cat uk-h6 uk-text-small ">
+                                    {COOKIE_CATEGORY_NAME}
+                                </a>
+                                <div style="width: 50px;">
+                                    <div id="cookie-cat-switcher-container-{COOKIE_CATEGORY_ID}">
+                                        <label>
+                                            <span class="uk-list uk-position-relative uk-flex uk-flex-middle uk-margin-remove switcher-checkbox-container uk-height-1-1" data-so-switcher>
+                                                <input id="cookie-cat-input-{COOKIE_CATEGORY_ID}" class="uk-checkbox" type="checkbox" data-category-id="{COOKIE_CATEGORY_ID}" >
+                                                <span class="switcher-button switch-on switcher-background switch-checkbox uk-position-center-right uk-margin-remove uk-active" data-checkbox-checked="true" ><span class="uk-link-reset uk-icon uk-border-pill" style="background-color: #76b654;"  data-uk-icon="icon:200-fill-switcher-switch-on;ratio:0.75"></span></span>
+                                                <span class="switcher-button switch-off switch-checkbox uk-position-center-right uk-margin-remove " data-checkbox-checked="false" ><span class="uk-link-reset uk-icon uk-border-pill" data-uk-icon="icon:200-fill-switcher-switch-off;ratio:0.75" ></span></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="uk-accordion-content uk-margin-small-top  uk-text-very-small">
+
+                                <div id="cookie-category-container-{COOKIE_CATEGORY_ID}" class="uk-grid uk-grid-small" data-uk-grid>
+                                    <div class="uk-width-expand">
+                                        {COOKIE_CATEGORY_DESCRIPTION}
+                                    </div>
+                                </div>
+
+                                <ul class="uk-padding-remove-left" data-uk-accordion="multiple: false;toggle: .uk-accordion-title-cookie">
+                                    <!-- BEGIN cookie -->
+
+                                    <li class="cookie-class-list-cookie uk-margin-small-top uk-margin-small-bottom">
+
+                                        <div class="uk-flex uk-flex-middle uk-flex-between">
+                                            <div><a class="uk-accordion-title-cookie " href="#"><strong>{COOKIE_NAME}</strong></a></div>
+
+                                            <!-- BEGIN cookie_disableable -->
+                                            <div style="width: 50px;">
+
+                                                <label>
+                                                    <span class="uk-list uk-position-relative uk-flex uk-flex-middle uk-margin-remove switcher-checkbox-container uk-height-1-1" data-so-switcher>
+                                                        <input id="cookie-{COOKIE_ID}" class="uk-checkbox" type="checkbox" data-cookie-id="{COOKIE_ID}" >
+                                                        <span class="switcher-button switch-on switcher-background switch-checkbox uk-position-center-right uk-margin-remove uk-active" data-checkbox-checked="true" ><span class="uk-link-reset uk-icon uk-border-pill" style="background-color: #76b654;"  data-uk-icon="icon:200-fill-switcher-switch-on;ratio:0.75"></span></span>
+                                                        <span class="switcher-button switch-off  switch-checkbox uk-position-center-right uk-margin-remove " data-checkbox-checked="false" ><span class="uk-link-reset uk-icon uk-border-pill" data-uk-icon="icon:200-fill-switcher-switch-off;ratio:0.75" ></span></span>
+                                                    </span>
+                                                </label>
+
+                                            </div>
+                                            <!-- END cookie_disableable -->
+
+                                        </div>
+
+                                        <div class="uk-accordion-content">
+
+                                            <div class="uk-grid uk-grid-collapse uk-child-width-1-1 uk-grid-match" data-uk-grid>
+
+                                                <div class=" ">
+                                                    <strong>{TXT_PRIVACY_COOKIE_NOTE_USE}</strong>
+                                                </div>
+                                                <div class="uk-margin-xsmall-bottom">
+                                                    {COOKIE_DESCRIPTION}
+                                                </div>
+
+                                                <!-- BEGIN cookie_names -->
+                                                <div class="uk-margin-small-top">
+                                                    <strong>{TXT_PRIVACY_COOKIE_NOTE_COOKIE_NAMES}</strong>
+                                                </div>
+                                                <div class="uk-margin-xsmall-bottom">
+                                                    {COOKIE_COOKIE_NAMES}
+                                                </div>
+                                                <!-- END cookie_names -->
+
+                                                <!-- BEGIN cookie_host -->
+                                                <div class="uk-margin-small-top">
+                                                    <strong>{TXT_PRIVACY_COOKIE_NOTE_COOKIE_HOST}</strong>
+                                                </div>
+                                                <div class="uk-margin-xsmall-bottom">
+                                                    {COOKIE_HOST}
+                                                </div>
+                                                <!-- END cookie_host -->
+
+                                                <!-- BEGIN cookie_privacystatement -->
+                                                <div class="uk-margin-small-top">
+                                                    <strong>{TXT_PRIVACY_COOKIE_NOTE_PRIVACY_STATEMENT}</strong>
+                                                </div>
+                                                <div class="uk-margin-xsmall-bottom">
+                                                    <a href="{COOKIE_PRIVACY_STATEMENT_URL}" target="_blank">{COOKIE_PRIVACY_STATEMENT_URL}</a>
+                                                </div>
+                                                <!-- END cookie_privacystatement -->
+
+                                            </div>
+
+
+                                        </div>
+                                    </li>
+
+                                    <!-- END cookie -->
+                                </ul>
+
+                            </div>
+
+                        </li>
+                        <!-- END cookie_category -->
+
+                    </ul>
+
+                </div>
+
+
+                <div class="uk-width-1-1 uk-text-right">
+                    <button id="cookie-note-2022-save" type="button" class="uk-button uk-button-small uk-button-primary " data-uk-toggle="target: #cookie-banner; cls: uk-hidden;" >{TXT_PRIVACY_COOKIE_NOTE_CLOSE}</button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
